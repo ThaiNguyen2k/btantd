@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { PoweroffOutlined } from '@ant-design/icons';
+import { Button, Space } from 'antd';
+import { useState } from 'react';
+const App = () => {
+  const [loadings, setLoadings] = useState([]);
+  const enterLoading = (index) => {
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+    setTimeout(() => {
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        return newLoadings;
+      });
+    }, 6000);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Space direction="vertical">
+      <Space wrap>
+        <Button type="primary" loading>
+          Loading
+        </Button>
+        <Button type="primary" size="small" loading>
+          Loading
+        </Button>
+        <Button type="primary" icon={<PoweroffOutlined />} loading />
+      </Space>
 
+      <Space wrap>
+        <Button type="primary" loading={loadings[0]} onClick={() => enterLoading(0)}>
+          Click me!
+        </Button>
+        <Button
+          type="primary"
+          icon={<PoweroffOutlined />}
+          loading={loadings[1]}
+          onClick={() => enterLoading(1)}
+        >
+          Click me!
+        </Button>
+        <Button
+          type="primary"
+          icon={<PoweroffOutlined />}
+          loading={loadings[2]}
+          onClick={() => enterLoading(2)}
+        />
+      </Space>
+    </Space>
+  );
+};
 export default App;
