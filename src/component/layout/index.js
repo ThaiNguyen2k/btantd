@@ -1,3 +1,4 @@
-import SiderL from "../layout/sider"
+import SiderL from "./sider";
+import PrimaryLayout from "./layout";
 
-export default SiderL;
+export { SiderL, PrimaryLayout };
