@@ -22,16 +22,16 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem(<NavLink to="/">Home</NavLink>, "1", <PieChartOutlined />),
-  getItem(<NavLink to="/user">User</NavLink>, "2", <UserOutlined />),
+  getItem(<NavLink to={"/"}>Home</NavLink>, "1", <PieChartOutlined />),
+  getItem(<NavLink to={"/users"}>User</NavLink>, "2", <UserOutlined />),
+  getItem(<NavLink to={"/customers"}>Customer</NavLink>,"3",<UsergroupAddOutlined />),
   getItem(
-    <NavLink to="/customers">Customer</NavLink>,
-    "3",
-    <UsergroupAddOutlined />
+    <NavLink to="/product">Product</NavLink>,
+    "4",
+    <ShoppingCartOutlined />
   ),
-  getItem("Product", "4", <ShoppingCartOutlined />),
-  getItem("Orders", "5", <AppstoreAddOutlined />),
-  getItem("Coupon", "6", <TagOutlined />),
+  getItem(<NavLink to="/orders">Orders</NavLink>, "5", <AppstoreAddOutlined />),
+  getItem(<NavLink to="/Coupon">Coupon</NavLink>, "6", <TagOutlined />),
 
   // getItem('User', 'sub1', <UserOutlined />, [
   //   getItem('Tom', '3'),

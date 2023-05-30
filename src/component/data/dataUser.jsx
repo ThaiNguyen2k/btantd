@@ -15,9 +15,6 @@ const DataUser = () => (
         Recharge
       </Button>
     </Col>
-    <Col span={12}>
-      <Statistic title="Active Users" value={112893} loading />
-    </Col>
   </Row>
 );
 export default DataUser;

@@ -1,16 +1,28 @@
 import "./App.css";
 import Home from "containers/AdminPage";
 import Login from "containers/Login";
+import Customers from "containers/customers";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import User from "containers/user";
+import Product from "containers/Product/Product";
+import Coupon from "containers/Coupon/Coupon";
+import Orders from "containers/Orders/Orders";
+
+import { PrimaryLayout } from "component/layout";
+import User from "containers/user/user";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/user" element={<User />} />
-      </Routes>
+      <PrimaryLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/users" element={<User />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/coupon" element={<Coupon />} />
+        </Routes>
+      </PrimaryLayout>
     </BrowserRouter>
   );
 }
