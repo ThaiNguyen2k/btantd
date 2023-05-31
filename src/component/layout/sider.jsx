@@ -24,7 +24,11 @@ function getItem(label, key, icon, children) {
 const items = [
   getItem(<NavLink to={"/"}>Home</NavLink>, "1", <PieChartOutlined />),
   getItem(<NavLink to={"/users"}>User</NavLink>, "2", <UserOutlined />),
-  getItem(<NavLink to={"/customers"}>Customer</NavLink>,"3",<UsergroupAddOutlined />),
+  getItem(
+    <NavLink to={"/customers"}>Customer</NavLink>,
+    "3",
+    <UsergroupAddOutlined />
+  ),
   getItem(
     <NavLink to="/product">Product</NavLink>,
     "4",
