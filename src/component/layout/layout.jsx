@@ -4,6 +4,7 @@ import { SiderL } from "component/layout";
 const LayoutStyled = styled.div`
   background-color: #caeae6;
   min-height: 100vh;
+  display: flex;
   .right {
     float: right;
     width: 86%;

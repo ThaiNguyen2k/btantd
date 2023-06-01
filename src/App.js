@@ -9,7 +9,6 @@ import Coupon from "containers/Coupon/Coupon";
 import Orders from "containers/Orders/Orders";
 import { Provider, connect } from "react-redux";
 import store from "Store/index";
-
 import { PrimaryLayout } from "component/layout";
 import User from "containers/user/user";
 function App() {

@@ -54,7 +54,7 @@ const SiderL = () => {
   return (
     <Layout
       style={{
-        minHeight: "100vh",
+        minHeight: "100%",
       }}
     >
       <Sider
